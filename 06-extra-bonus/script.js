@@ -1,4 +1,4 @@
-// Scrivi una funzione contaParola(parole, parolaCercata) 
+// 1. Scrivi una funzione contaParola(parole, parolaCercata) 
 // che riceve un array di stringhe e restituisce quante volte compare parolaCercata.
 
 const elenco = ["miele", "olio", "uova", "miele", "pane", "miele"];
@@ -19,7 +19,7 @@ console.log(countWord(elenco, "miele")); // 3
 
 
 
-// Scrivi una funzione mediaPositivi(array) 
+// 2. Scrivi una funzione mediaPositivi(array) 
 // che restituisce la media dei soli numeri maggiori di 0.
 
 const numeriTest = [-2, 5, 10, -3, 7];
@@ -50,3 +50,26 @@ const mediaPositive = (array) => {
 }
 
 console.log(mediaPositive(numeriTest)); // (5 + 10 + 7) / 3 = 7.33
+
+
+
+
+
+// 3. Scrivi una funzione concatenaBrevi(array, maxLunghezza) che unisce in 
+// un’unica stringa tutte le parole con lunghezza inferiore o uguale a maxLunghezza.
+
+const parole = ["ape", "miele", "olio", "uovo", "pane", "solee"];
+
+const concatWordMaxLength = (array, maxLength) => {
+    let resultArray = [];
+    
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].length <= maxLength){
+            resultArray += array[i] ;
+        }
+    }
+    return resultArray;
+}
+
+
+console.log(concatWordMaxLength(parole, 4)); // "apeolioovopane"
