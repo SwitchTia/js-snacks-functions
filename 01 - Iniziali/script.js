@@ -6,12 +6,12 @@ const names = ["Anna", "Luca", "Marco", "Adele", "Giovanni", "Alessandra"];
 
 // Dichiara la funzione qui
 const getInitials = (array) => {
-    let newArray = [];
-
-    for (let i = 0; i < array.length - 1; i++) {
-        //devo pensare
+    let initialsArray = [];
+    
+    for (let i = 0; i < array.length; i++) {
+        initialsArray.push(array[i][0]);
     }
-
+    return initialsArray;
 }
 
 
