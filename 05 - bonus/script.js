@@ -18,11 +18,19 @@ const getCurrentHour = () =>{
 
 const saluteProperTime = (stringName) => {
     let currentHour = getCurrentHour();
-    //console.log(currentHour);
-    
+    console.log(currentHour);
+    let message = "";
 
-
-    return ;
+    if (currentHour < 13){
+        message = `Buongiorno ${stringName}`;
+    }
+    else if (currentHour < 17){
+        message = `Buon pomerrigio ${stringName}`;
+    }
+    else {
+        message = `Buonasera ${stringName}`;
+    }
+    return message;
 }
 
 // Invoca la funzione qui e stampa il risultato in console
