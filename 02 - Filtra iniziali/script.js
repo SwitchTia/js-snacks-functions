@@ -5,10 +5,20 @@ const names = ["Anna", "Luca", "Marco", "Adele", "Laura", "Alessandra"];
 
 
 // Dichiara la funzione qui.
+const getInitialX = (array, x) => {
+    let initialX = [];
+    
+    for (let i = 0; i < array.length; i++) {
+        if (array[i][0] === x){
+            initialX.push(array[i]);
+        }
+    }
+    return initialX;
+}
 
 
 // Invoca la funzione qui e stampa il risultato in console
 
-
+console.log(getInitialX(names, "A"));
 
 //Risultato atteso se si passa la lettera A: ["Anna", "Adele", "Alessandra"]
